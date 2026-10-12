@@ -37,13 +37,13 @@ jobs:
         run: npm install --include=dev --no-audit --no-fund
 
       - name: Verify build tools
-        run: node -e "console.log(require.resolve('tsx'))"
+        run: node -e "console.log(require.resolve('tsx')); console.log(require.resolve('electron-builder/cli.js'))"
 
       - name: Build web and server assets
-        run: npm run build
+        run: node --import tsx script/build.ts
 
       - name: Build desktop package
-        run: npx electron-builder --${{ matrix.platform }} --publish never
+        run: node node_modules/electron-builder/cli.js --${{ matrix.platform }} --publish never
 
       - name: Upload package artifact
         uses: actions/upload-artifact@v4
