@@ -37,7 +37,7 @@ jobs:
         run: npm install --include=dev --no-audit --no-fund
 
       - name: Verify build tools
-        run: node -e "console.log(require.resolve('tsx')); console.log(require.resolve('electron-builder/cli.js'))"
+        run: node -e "console.log(require.resolve('tsx')); console.log(require.resolve('electron-builder'))"
 
       - name: Build web and server assets
         run: node --import tsx script/build.ts
