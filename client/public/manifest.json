@@ -1,0 +1,20 @@
+{
+  "name": "SmartPanel — PRO Dashboard",
+  "short_name": "SmartPanel",
+  "description": "Soat, ob-havo, valyuta, kripto, shaxmat va ko'p narsalar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060612",
+  "theme_color": "#060612",
+  "orientation": "any",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["productivity", "utilities"],
+  "shortcuts": [
+    { "name": "Ob-havo", "url": "/?tab=1", "description": "Ob-havo ma'lumotlari" },
+    { "name": "Valyuta", "url": "/?tab=2", "description": "Valyuta kurslari" },
+    { "name": "Kripto",  "url": "/?tab=6", "description": "Kripto narxlar" }
+  ]
+}
